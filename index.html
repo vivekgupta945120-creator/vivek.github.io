@@ -31,6 +31,22 @@
   const analytics = getAnalytics(app);
 </script>
 
+function saveItem(){
+
+let name = document.getElementById("name").value
+let qty = document.getElementById("qty").value
+
+db.ref("items/"+name).set({
+name:name,
+qty:qty
+})
+
+alert("Item Online Save Ho Gaya")
+
+}
+
+</script>
+
 </head>
 <meta charset="UTF-8">
 <title>Offline Godam Software</title>
