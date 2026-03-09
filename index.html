@@ -8,29 +8,26 @@
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
 
 <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+<script>
+
 const firebaseConfig = {
   apiKey: "AIzaSyBmv5ZiErU-CWJ3RKjDotw6uvBC3prGILs",
   authDomain: "vkgsty-7f000.firebaseapp.com",
-  databaseURL: "https://vkgsty-7f000-default-rtdb.asia-southeast1.firebasedatabase.app"
+  databaseURL: "https://vkgsty-7f000-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "vkgsty-7f000",
-  storageBucket: "vkgsty-7f000.firebasestorage.app",
+  storageBucket: "vkgsty-7f000.appspot.com",
   messagingSenderId: "157930224879",
-  appId: "1:157930224879:web:c558322eb9f37816a6ef1a",
-  measurementId: "G-ZVXGF092FJ"
+  appId: "1:157930224879:web:c558322eb9f37816a6ef1a"
 };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  <script>
+
+firebase.initializeApp(firebaseConfig);
+
 var db = firebase.database();
+
+</script>
 <script>
 
 function saveItem(){
@@ -431,5 +428,6 @@ reader.readAsText(file)
 </body>
 
 </html>
+
 
 
