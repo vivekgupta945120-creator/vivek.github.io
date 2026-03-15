@@ -1,53 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>Godam Software</title>
+
 <style>
 body{
 background-image: url("background.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-margin:0;
-height:100vh;
+height: 100vh;
+margin: 0;
+font-family: Arial, sans-serif;
+color: white;
+text-align: center;
+}
+
+h1{
+margin-top: 200px;
+font-size: 50px;
+background: rgba(0,0,0,0.5);
+display: inline-block;
+padding: 20px;
+border-radius: 10px;
 }
 </style>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
-<script>
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBmv5ZiErU-CWJ3RKjDotw6uvBC3prGILs",
-  authDomain: "vkgsty-7f000.firebaseapp.com",
-  databaseURL: "https://vkgsty-7f000-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "vkgsty-7f000",
-  storageBucket: "vkgsty-7f000.firebasestorage.app",
-  messagingSenderId: "157930224879",
-  appId: "1:157930224879:web:c558322eb9f37816a6ef1a"
-};
-
-firebase.initializeApp(firebaseConfig);
-
-var db = firebase.database();  
-  
-function saveItem(){
-
-let name = document.getElementById("name").value
-let qty = document.getElementById("qty").value
-
-db.ref("items/"+name).set({
-name:name,
-qty:qty
-})
-
-alert("Item online save ho gaya")
-
-}
-  
-</script>
-  
 </head>
 <meta charset="UTF-8">
 <title>Offline Godam Software</title>
